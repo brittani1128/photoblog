@@ -4,5 +4,9 @@
 }
 
 .card-image {
-    height:200px;
+    height:250px;
+}
+
+.thumbnail-link {
+    text-decoration: none;
 }

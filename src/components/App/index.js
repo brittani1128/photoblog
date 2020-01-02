@@ -1,22 +1,20 @@
 import React from 'react';
 import './App.css';
+import { Router } from '@reach/router'
 
+import Home from '../../views/home'
+import Trip from '../../views/trip'
 
 import {Container} from '@material-ui/core'
 
-import ThumbnailGrid from '../ThumbnailGrid'
 
 function App() {
   return (
     <Container>
-      <div className="App">
-        <header className="App-header">
-          <div style={{height:'150px'}}>My Travel PhotoBlog</div>
-        </header>
-        <main className='grid-wrapper'>
-          <ThumbnailGrid/>
-        </main>
-      </div>
+      <Router>
+        <Home path='/' />
+        <Trip path='/trip' />
+      </Router>
     </Container>
   );
 }
