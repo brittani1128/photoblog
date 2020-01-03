@@ -1,20 +1,23 @@
 import React from 'react';
-import './App.css';
-import { Router } from '@reach/router'
+import './styles.css';
+import { useRoutes } from 'hookrouter';
+
 
 import Home from '../../views/home'
 import Trip from '../../views/trip'
 
-import {Container} from '@material-ui/core'
+import { Container } from '@material-ui/core'
 
+const routes = {
+  '/': () => <Home/>,
+  '/trip/:name': ({ name }) => <Trip name={name} />
+}
 
 function App() {
+  const routeResult = useRoutes(routes);
   return (
     <Container>
-      <Router>
-        <Home path='/' />
-        <Trip path='/trip' />
-      </Router>
+      {routeResult}
     </Container>
   );
 }

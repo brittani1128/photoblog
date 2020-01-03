@@ -1,23 +1,30 @@
-import React, { Component } from 'react'
-import './styles.css'
-import { Card, CardContent, CardMedia, CardActionArea, Typography } from '@material-ui/core'
-import { Link } from '@reach/router'
+import React, { Component } from "react";
+import "./styles.css";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  CardActionArea,
+  Typography
+} from "@material-ui/core";
 
 class Thumbnail extends Component {
-	render() {
+  render() {
 		return (
-			<Link to={`/trip`} className='thumbnail-link'>
-				<Card variant="outlined">
-					<CardActionArea>
-						<CardMedia image={this.props.imageSrc} title='Trip title' className='card-image'/>
-						<CardContent>
-							<Typography variant='button'>{this.props.tripLabel}</Typography>
-						</CardContent>
-					</CardActionArea>
-				</Card>
-			</Link>
-		)
-	}
+			<Card variant="outlined">
+				<CardActionArea>
+					<CardMedia
+						image={this.props.imageSrc}
+						title="Trip title"
+						className="card-image"
+					/>
+					<CardContent>
+						<Typography variant="button">{this.props.tripLabel}</Typography>
+					</CardContent>
+				</CardActionArea>
+			</Card>
+		);
+  }
 }
 
-export default Thumbnail
+export default Thumbnail;

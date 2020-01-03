@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Button, GridList, GridListTile, Typography } from '@material-ui/core'
-import {Link} from '@reach/router'
+import { Button, Typography } from '@material-ui/core'
+import { A } from 'hookrouter';
 import PhotoGrid from '../components/PhotoGrid'
 import './styles.css'
+
 const tiles = [
 		{
 			image: 'https://via.placeholder.com/150x200',
@@ -50,15 +51,16 @@ const tiles = [
 			cols: 2
 		}
 ]
+
 class Trip extends Component {
 	render() {
-		return ( 
+		return (
 			<div>
 				<header style={{height: '200px', paddingTop:'20px'}}>
-					<Button primary><Link to='/'>{`<-- Back`}</Link></Button>
-					<Typography variant='h2' className='trip-title'>Title</Typography>
+					<A href='/'><Button primary>{`<-- Back`}</Button></A>
+					<Typography variant='h2' className='trip-title'>{this.props.name}</Typography>
 				</header>
-				<PhotoGrid images={tiles}/>
+				<PhotoGrid images={tiles} />
 			</div>
 		)
 	}
