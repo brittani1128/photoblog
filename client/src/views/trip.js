@@ -88,7 +88,6 @@ class Trip extends Component {
 
   render() {
     const { trip } = this.state;
-    console.log({ trip });
     return (
       <div>
         <header style={{ height: "200px", paddingTop: "20px" }}>

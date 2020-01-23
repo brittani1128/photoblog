@@ -4,5 +4,18 @@
   "main": "index.js",
   "repository": "https://github.com/brittani1128/photoblog.git",
   "author": "Brittani Slimp (brittani1128@gmail.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
