@@ -12,7 +12,14 @@ const port = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/trip/:name', (req, res) => res.send(req.params.name))
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log('MongoDB database connection established successfully')
+});
+
+app.get('/trip/:name', (req, res) => res.send(req.params.name));
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
