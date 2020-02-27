@@ -27,8 +27,6 @@ const photosRouter = require('./routes/photos');
 app.use('/collections', collectionsRouter);
 app.use('/photos', photosRouter);
 
-// app.get('/trip/:name', (req, res) => res.send(req.params.name));
-
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
