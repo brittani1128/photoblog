@@ -4,13 +4,13 @@ import { useRoutes } from 'hookrouter';
 
 
 import Home from '../../views/home'
-import Trip from '../../views/trip'
+import Collection from '../../views/collection'
 
 import { Container } from '@material-ui/core'
 
 const routes = {
   '/': () => <Home/>,
-  '/trip/:name': ({ name }) => <Trip name={name} />
+  '/collection/:name': ({ name }) => <Collection name={name} />
 }
 
 function App() {

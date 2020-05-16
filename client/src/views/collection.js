@@ -5,50 +5,65 @@ import "./styles.css";
 
 const tiles = [
   {
-    image: "https://via.placeholder.com/150x200",
+    image: "/images/seasia-2018/IMG_8133.jpeg",
     title: "title",
     cols: 1
   },
   {
-    image: "https://via.placeholder.com/150x200",
+    image: "/images/seasia-2018/IMG_8136.jpg",
     title: "title",
     cols: 1
   },
   {
-    image: "https://via.placeholder.com/150x200",
+    image: "/images/seasia-2018/IMG_8141.jpeg",
     title: "title",
     cols: 1
   },
   {
-    image: "https://via.placeholder.com/100x100",
+    image: "/images/seasia-2018/IMG_8211.jpeg",
     title: "title",
     cols: 2
   },
   {
-    image: "https://via.placeholder.com/300x150",
+    image: "/images/seasia-2018/IMG_8144.jpeg",
     title: "title",
     cols: 1
   },
   {
-    image: "https://via.placeholder.com/150x200",
+    image: "/images/seasia-2018/IMG_8147.jpeg",
     title: "title",
     cols: 2
   },
   {
-    image: "https://via.placeholder.com/150x200",
+    image: "/images/seasia-2018/IMG_8182.jpeg",
     title: "title",
     cols: 1
   },
   {
-    image: "https://via.placeholder.com/200x200",
+    image: "/images/seasia-2018/IMG_8183.jpeg",
     title: "title",
     cols: 1
   },
   {
-    image: "https://via.placeholder.com/150x150",
+    image: "/images/seasia-2018/IMG_8176.jpeg",
     title: "title",
     cols: 2
-  }
+  },
+  {
+    image: "/images/seasia-2018/IMG_8188.jpeg",
+    title: "title",
+    cols: 1
+  },
+  {
+    image: "/images/seasia-2018/IMG_8190.jpeg",
+    title: "title",
+    cols: 1
+  },
+  {
+    image: "/images/seasia-2018/IMG_8192.jpeg",
+    title: "title",
+    cols: 1
+  },
 ];
 
 const data = [
@@ -69,7 +84,9 @@ const data = [
   }
 ];
 
-class Trip extends Component {
+const seasiaImages = []
+
+export default class Collection extends Component {
   state = {
     trip: []
   };
@@ -108,7 +125,7 @@ class Trip extends Component {
               overflow: "hidden"
             }}
           >
-            <GridList cellHeight={300} cols={3}>
+            <GridList cellHeight={500} cols={3}>
               {trip[0].images.map((tile, idx) => (
                 <GridListTile cols={tile.cols} key={idx}>
                   <img src={tile.image} alt={tile.title} />
@@ -123,5 +140,3 @@ class Trip extends Component {
     );
   }
 }
-
-export default Trip;

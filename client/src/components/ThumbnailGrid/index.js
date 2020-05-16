@@ -13,7 +13,7 @@ class ThumbnailGrid extends Component {
       <React.Fragment>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
-            <A href="/trip/seasia-2018" className="hookrouter-A">
+            <A href="/collection/seasia-2018" className="hookrouter-A">
               <Thumbnail
                 tripLabel={"Southeast Asia 2019"}
                 imageSrc={asiaElephant}
@@ -21,7 +21,7 @@ class ThumbnailGrid extends Component {
             </A>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
-            <A href="/trip/london-paris-2018" className="hookrouter-A">
+            <A href="/collection/london-paris-2018" className="hookrouter-A">
               <Thumbnail
                 tripLabel={"London and Paris 2018"}
                 imageSrc={stonehenge}
@@ -29,7 +29,7 @@ class ThumbnailGrid extends Component {
             </A>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
-            <A href="/trip/scotland-ireland-2019" className="hookrouter-A">
+            <A href="/collection/scotland-ireland-2019" className="hookrouter-A">
               <Thumbnail
                 tripLabel={"Scotland and Ireland 2019"}
                 imageSrc={dublin}
