@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-import Photo from '../models/photo.model';
+import Photo from '../models/photo.model.js';
 
 // Find all photos
 router.route('/').get((req, res) => {

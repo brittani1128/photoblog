@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-import Collection from '../models/collection.model';
+import Collection from '../models/collection.model.js';
 
 // Find all collections
 router.route('/').get((req, res) => {
