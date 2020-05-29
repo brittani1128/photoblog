@@ -4,21 +4,21 @@ const router = express.Router();
 import Photo from '../models/photo.model.js';
 
 // Find all photos
-router.route('/').get((req, res) => {
+router.get('/', (req, res) => {
   Photo.find()
     .then((photos) => res.json(photos))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
 // Find one photo by id
-router.route('/:id').get((req, res) => {
+router.get('/:id', (req, res) => {
   Photo.find({ id: req.params.id })
     .then((photos) => res.json(photos))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
 // Add photo
-router.route('/add').post((req, res) => {
+router.post('/add', (req, res) => {
   const name = req.body.name;
   const newPhoto = new Photo({ name, url: req.body.url });
   newPhoto

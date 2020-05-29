@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import collectionsRouter from './routes/collections.js';
-import photosRouter from './routes/photos.js';
+import collectionsRouter from './routes/collection-routes.js';
+import photosRouter from './routes/photos-routes.js';
 
 dotenv.config();
 
