@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -7,10 +7,10 @@ const collectionSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    trim: true
+    trim: true,
   },
-  photos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Photo" }]
+  photos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Photo' }],
 });
 
 const Collection = mongoose.model('Collection', collectionSchema);
-module.exports = Collection;
+export default Collection;

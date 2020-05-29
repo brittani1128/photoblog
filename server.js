@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import collectionsRouter from './routes/collections.js';
+import photosRouter from './routes/photos.js';
 
 dotenv.config();
 
@@ -17,13 +19,10 @@ const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log('MongoDB database connection established successfully')
+  console.log('MongoDB database connection established successfully');
 });
 
 // Routes
-const collectionsRouter = require('./routes/collections');
-const photosRouter = require('./routes/photos');
-
 app.use('/collections', collectionsRouter);
 app.use('/photos', photosRouter);
 
